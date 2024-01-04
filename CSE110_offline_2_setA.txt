@@ -1,0 +1,14 @@
+Array input ( I used it using pointer)
+Array toolkit (
+  Printing that array along with its size,
+  sorting, 
+  avg of the int elements, 
+  union of two arrays,
+  Max repeatation of a particular number,
+  Removing repeated elements thus an unique matrix;
+  )
+Matrix input or I should say matrix representation of an array given row and column number
+Matrix operation (add, 
+  subtract, 
+  multiplication)
+   
