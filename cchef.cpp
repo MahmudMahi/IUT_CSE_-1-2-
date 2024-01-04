@@ -7,23 +7,44 @@ void rmv(int* arr, int index, int n);
 void max_repeat(int *arr, int n);
 void mean(int* arr,int n);
 bool check_sorted(int* arr, int n);
+void Union(int* arr1, int* arr2, int n1, int n2);
+void mat_input(int row, int col);
+void mat_input(int row, int col){
+    int* mat= new int[row*col];
+    for(int k=0; k<(row*col); k++){
+        cin>>*(mat+k);
+    }
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cout<<*(mat+j+(i*col))<<" ";
+            
+        }cout<<endl;
+    }
+    delete[] mat;
+}
+
 int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt","w", stdout);
-    int n;
-    cin>>n;
-    int* myArr= Input_array(n);
-    print_array(myArr,n);
-    sort(myArr, myArr+n);
-    print_array(myArr,n);
-    mean(myArr, n);
-   // unique_arr(myArr, n); there's a bug here in this function
-   // i will debug that tommororw,patience nai R :(
-    max_repeat(myArr, n);
-    bool x= check_sorted(myArr,n);
-    if(x==true) cout<<"True"<<endl;
-    else cout<<"False"<<endl;
-    delete[] myArr;
+    char ans;
+    cout<<"Want matrix or array?"<<endl;
+    cout<<"(type 'm' for matrix, 'a' for array)"<<endl;
+    cin>>ans;
+    if(ans== 'm'){
+        int row, col;
+        cin>>row>>col;
+        mat_input(row, col);
+    }
+    else if(ans == 'a'){
+        int n1, n2;
+        cin>>n1>>n2;
+        int* myArr= Input_array(n1);
+        int* myArr1= Input_array(n2);
+        print_array(myArr, n1);
+        print_array(myArr1, n2);
+        delete[] myArr;
+        delete[] myArr1;
+    }
     return 0;
 }
 int* Input_array(int n){
@@ -85,4 +106,16 @@ void max_repeat(int* arr, int n){
     }
    }
    cout<<max_elem<<endl; 
+}
+void Union(int* arr1, int* arr2, int n1, int n2){
+    int* arr= new int[n1+n2];
+    for(int i=0; i<n1; i++){
+        *(arr+i)= *(arr1+i);
+    }
+    for(int j=n1; j<(n2+n1); j++){
+        *(arr+j)= *(arr2+j-n1);
+    }
+    for(int k=0; k<(n1+n2); k++) cout<<*(arr+k)<<" ";
+    cout<<endl;
+    delete[] arr;
 }
