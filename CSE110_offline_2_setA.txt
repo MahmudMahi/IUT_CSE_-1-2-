@@ -1,1 +1,16 @@
 
+Array input - I used pointer method
+Array Toolkit :- (
+	print array
+	check if sorted or not
+	sort it
+	unique array ie repeated elements should be wiped out 
+	the element which has been repeated maximum times 
+	Union of two arrays
+	Avg of the array elements ( let's say we are only talking about integer arrays)
+
+Matrix input or I should rather say the visual representation of an array given row and column number 
+Matrix Toolkit :- (
+	Add
+	Subtraction
+	Multiplication
