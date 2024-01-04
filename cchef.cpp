@@ -24,8 +24,8 @@ void mat_input(int row, int col){
 }
 
 int main(){
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt","w", stdout);
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt","w", stdout);
     char ans;
     cout<<"Want matrix or array?"<<endl;
     cout<<"(type 'm' for matrix, 'a' for array)"<<endl;
