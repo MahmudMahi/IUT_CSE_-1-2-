@@ -1,4 +1,4 @@
-
+BUET EEE-22 assignment for 1-1
 Array input - I used pointer method
 Array Toolkit :- (
 	print array
@@ -14,3 +14,4 @@ Matrix Toolkit :- (
 	Add
 	Subtraction
 	Multiplication
+Lexicographical problem is from another set. In that problem I was not allowed to use pointers or strings therefore I had to custom made strcpy and strcmp functions.
