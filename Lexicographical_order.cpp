@@ -1,3 +1,4 @@
+// Part of the assignment of BUET CSE-110 course for EEE-22 1-1, Set-B
 #include <bits/stdc++.h>
 using namespace std;
 int compare_chars(char arr1[], char arr2[]) { //strcmp
